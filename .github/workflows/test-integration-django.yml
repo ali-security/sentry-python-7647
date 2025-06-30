@@ -58,7 +58,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: MatteoH2O1999/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
 

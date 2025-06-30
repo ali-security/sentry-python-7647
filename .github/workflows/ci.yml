@@ -19,12 +19,12 @@ env:
 jobs:
   lint:
     name: Lint Sources
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: MatteoH2O1999/setup-python@v4
         with:
           python-version: 3.9
 
@@ -34,12 +34,12 @@ jobs:
 
   check-ci-config:
     name: Check CI config
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: MatteoH2O1999/setup-python@v4
         with:
           python-version: 3.9
 
@@ -48,12 +48,12 @@ jobs:
 
   build_lambda_layer:
     name: Build Package
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v4
+      - uses: MatteoH2O1999/setup-python@v4
         with:
           python-version: 3.9
       - name: Setup build cache
@@ -89,12 +89,12 @@ jobs:
 
   docs:
     name: Build SDK API Doc
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v4
+      - uses: MatteoH2O1999/setup-python@v4
         with:
           python-version: 3.9
 
